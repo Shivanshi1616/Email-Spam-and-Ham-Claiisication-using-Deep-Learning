@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Heading Animation */
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            color: #00c9ff;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Result Container */
+        .result-container {
+            background: rgba(10, 25, 47, 0.9);
+            border-radius: 15px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+            animation: slideUp 1.5s ease-in-out forwards;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #66fcf1;
+            margin: 20px 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #0b0c10;
+            text-decoration: none;
+            background: linear-gradient(45deg, #66fcf1, #45a29e);
+            border-radius: 8px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Classification Result</h1>
+        <p>{{ prediction }}</p>
+        <a href="/">Classify Another Email</a>
+    </div>
+</body>
+</html>
